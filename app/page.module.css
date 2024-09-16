@@ -1,0 +1,139 @@
+.App {
+  text-align: center;
+  margin: 0 auto;
+}
+
+h1.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.jokePlace {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  color: #a0b0c0;
+}
+
+.mainContainer {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.searchContainer {
+  position: relative;
+  width: 100%;
+  padding: 0 2.5rem 0 1rem;
+  border: 2px solid #2b68f6;
+  border-radius: 10px;
+  position: relative;
+}
+
+input.search[name='search'] {
+  width: 100%;
+  font-size: 1rem;
+  color: #c7d1d9;
+  line-height: 3rem;
+  background-color: #1d1f26;
+  outline: none;
+  font-size: 1.5rem;
+  border: none;
+}
+
+input.search[name='search']::placeholder {
+  color: #7d8793;
+}
+
+.spinner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes spinner {
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #2b68f6;
+  border-bottom-color: #2b68f6;
+  animation: spinner 0.8s ease infinite;
+}
+
+.arrowDown {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border: solid #2b68f6;
+  border-width: 0 2px 2px 0;
+  padding: 5px;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.arrowUp {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border: solid #2b68f6;
+  border-width: 0 2px 2px 0;
+  padding: 5px;
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.jokeList {
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+  overflow-y: auto;
+  border: 2px solid #2b68f6;
+  border-radius: 10px;
+  background-color: #1d1f26;
+  color: #c7d1d9;
+  width: 100%;
+  box-sizing: border-box;
+  max-height: 380px;
+}
+
+.jokeList li {
+  padding: 4px;
+}
+
+.jokeList li > div {
+  padding: 10px;
+  cursor: pointer;
+  height: 100%;
+  font-size: 1.5rem;
+  line-height: 48px;
+  width: 100%;
+  text-overflow: ellipsis;
+  border-radius: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.jokeList li:hover > div {
+  background-color: #3a4b74;
+  color: white;
+}
